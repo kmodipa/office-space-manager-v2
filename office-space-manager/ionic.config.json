@@ -1,0 +1,7 @@
+{
+  "name": "office-space-manager",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
