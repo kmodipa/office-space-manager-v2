@@ -1,0 +1,55 @@
+<div class="l-card-container">
+  <ion-card class="l-card l-left-gradient-border-{{ office.hexcolor }}">
+    <ion-card-header>
+      <ion-grid>
+        <ion-row class="l-mb-13">
+          <ion-col size="10" class="l-card-header">{{ office.name }}</ion-col>
+          <ion-col size="2" style="text-align: end"
+            ><img src="assets/icon/Edit-3.svg"
+          /></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="2"><img src="assets/icon/people.svg" /></ion-col>
+          <ion-col size="10" class="l-card-subtitle">{{
+            office.capacity
+          }}</ion-col>
+        </ion-row>
+      </ion-grid>
+      <hr class="l-card-hr" />
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-accordion-group>
+        <ion-accordion value="first" toggleIconSlot="end">
+          <ion-item slot="header" class="l-accordion-tricker">
+            <ion-label class="l-card-subtitle">More Info</ion-label>
+          </ion-item>
+          <div slot="content">
+            <ion-grid class="l-card-subtitle">
+              <ion-row>
+                <ion-col size="2"><img src="assets/icon/Phone.svg" /></ion-col>
+                <ion-col size="10">{{ office.phone }}</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="2"><img src="assets/icon/Email.svg" /></ion-col>
+                <ion-col size="10">{{ office.email }}</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="2"
+                  ><img src="assets/icon/people-2.svg"
+                /></ion-col>
+                <ion-col size="10">{{ office.phone }}</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="2"
+                  ><img src="assets/icon/location.svg"
+                /></ion-col>
+                <ion-col size="10">{{ office.address }}</ion-col>
+              </ion-row>
+            </ion-grid>
+          </div>
+        </ion-accordion>
+      </ion-accordion-group>
+    </ion-card-content>
+  </ion-card>
+</div>
