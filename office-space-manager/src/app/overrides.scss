@@ -1,3 +1,31 @@
-ion-content, ion-toolbar {
+ion-content,
+ion-toolbar {
   --background: var(--primary);
+}
+
+ion-accordion-group {
+  ion-accordion {
+    .ion-accordion-toggle-icon {
+      color: var(--plus-button-blue);
+    }
+  }
+}
+
+ion-card-header {
+  padding-bottom: 0;
+}
+
+ion-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+}
+
+ion-col {
+  padding: 0;
+}
+
+.header-md::after {
+  background-image: unset;
 }
