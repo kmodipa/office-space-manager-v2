@@ -1,0 +1,16 @@
+<ion-header>
+  <app-top-navbar title="Office"></app-top-navbar>
+</ion-header>
+
+<ion-content>
+  <div style="padding: 16px 0">
+    <app-office-card [office]="office" [openOffice]="false"></app-office-card>
+  </div>
+  <div style="padding: 16px">
+    <ion-input
+      type="text"
+      placeholder="Search"
+      [(ngModel)]="searchPhrase"
+    ></ion-input>
+  </div>
+</ion-content>

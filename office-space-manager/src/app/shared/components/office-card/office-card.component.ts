@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { OfficeModel } from '../../../core/models/office.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-office-card',
@@ -8,8 +9,19 @@ import { OfficeModel } from '../../../core/models/office.model';
 })
 export class OfficeCardComponent implements OnInit {
   @Input() office: OfficeModel;
+  @Input() openOffice: boolean;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit() {}
+
+  handleOpenOffice(): void {
+    if (this.openOffice) {
+      this.router.navigate([`office/office-home/${this.office.officeId}`]);
+    }
+  }
+
+  handleEditOffice(): void {
+    // TODO: Route to edit office
+  }
 }
