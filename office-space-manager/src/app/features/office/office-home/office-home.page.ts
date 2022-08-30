@@ -23,4 +23,9 @@ export class OfficeHomePage implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  handleAddStaffMember(): void {
+    // TODO: Open Pop-up modal
+    console.log('Open');
+  }
 }

@@ -6,11 +6,21 @@
   <div style="padding: 16px 0">
     <app-office-card [office]="office" [openOffice]="false"></app-office-card>
   </div>
-  <div style="padding: 16px">
-    <ion-input
-      type="text"
-      placeholder="Search"
-      [(ngModel)]="searchPhrase"
-    ></ion-input>
-  </div>
+
+  <ion-grid class="g-zero-padding l-search-input">
+    <ion-row class="l-search-icon">
+      <ion-col size="11">
+        <ion-input
+          type="text"
+          placeholder="Search"
+          [(ngModel)]="searchPhrase"
+        ></ion-input>
+      </ion-col>
+      <ion-col size="1">
+        <img src="assets/icon/Search.svg" />
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
+
+<app-add-button (buttonClick)="handleAddStaffMember()"></app-add-button>
