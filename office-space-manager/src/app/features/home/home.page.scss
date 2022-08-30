@@ -1,27 +1,24 @@
-#container {
-  text-align: center;
+@use "../../page-size-mixin";
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+.l-offices-grid {
+  display: grid;
+  gap: 16px;
+  max-width: 1140px;
+  grid-template-columns: repeat(1, 1fr);
+  margin: auto;
+  grid-column: span 1;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+@include page-size-mixin.breakpoints(tablet) {
+  .l-offices-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column: span 1;
+  }
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
+@include page-size-mixin.breakpoints(laptop) {
+  .l-offices-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-column: span 1;
+  }
 }
