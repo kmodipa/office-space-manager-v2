@@ -28,4 +28,12 @@ export class OfficeHomePage implements OnInit {
     // TODO: Open Pop-up modal
     console.log('Open');
   }
+
+  handleLoadMoreStaffMembers(event: any): void {
+    // TODO: Load more data
+    setTimeout(() => {
+      console.log('Loading Done');
+      event.target.complete();
+    }, 3000);
+  }
 }
