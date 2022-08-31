@@ -4,6 +4,7 @@ import { OfficeCardComponent } from './components/office-card/office-card.compon
 import { IonicModule } from '@ionic/angular';
 import { TopNavbarComponent } from './components/top-navbar/top-navbar.component';
 import { AddButtonComponent } from './components/add-button/add-button.component';
+import { FormsModule } from '@angular/forms';
 
 const components = [
   OfficeCardComponent,
@@ -13,7 +14,7 @@ const components = [
 
 @NgModule({
   declarations: [...components],
-  imports: [CommonModule, IonicModule],
+  imports: [CommonModule, IonicModule, FormsModule],
   exports: [...components],
 })
 export class SharedModule {}

@@ -3,12 +3,17 @@
     <ion-card-header>
       <ion-grid>
         <ion-row class="l-mb-13">
-          <ion-col size="10" class="l-card-header">{{ office.name }}</ion-col>
+          <ion-col
+            size="10"
+            class="l-card-header"
+            (click)="handleOpenOffice()"
+            >{{ office.name }}</ion-col
+          >
           <ion-col size="2" style="text-align: end"
             ><img src="assets/icon/Edit-3.svg"
           /></ion-col>
         </ion-row>
-        <ion-row>
+        <ion-row (click)="handleOpenOffice()">
           <ion-col size="2"><img src="assets/icon/people.svg" /></ion-col>
           <ion-col size="10" class="l-card-subtitle">{{
             office.capacity
