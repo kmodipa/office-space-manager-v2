@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { OfficeModel } from '../../core/models/office.model';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -18,9 +17,5 @@ export class HomePage {
     officeId: 'jsgf',
   };
 
-  constructor(private router: Router) {}
-
-  handleAddOffice(): void {
-    this.router.navigate(['office/add-office']);
-  }
+  constructor() {}
 }
