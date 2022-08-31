@@ -34,9 +34,10 @@
               "src/app/variables.scss",
               "src/app/styles.scss",
               "src/app/overrides.scss",
-              "src/global.scss"
+              "src/global.scss",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": [],
+            "scripts": ["./node_modules/bootstrap/dist/js/bootstrap.min.js"],
             "aot": false,
             "vendorChunk": true,
             "extractLicenses": false,

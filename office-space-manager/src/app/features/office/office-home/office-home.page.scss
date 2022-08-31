@@ -1,0 +1,31 @@
+.l-search-input {
+  border: var(--generic-border-color) solid 1px;
+  margin: 16px;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 0;
+}
+
+.l-search-icon {
+  background: var(--input-background);
+}
+
+.l-staff-header {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: -0.02em;
+}
+
+.l-staff-count {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.l-staff-member-row {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 14px;
+}

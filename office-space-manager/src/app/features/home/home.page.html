@@ -8,7 +8,10 @@
   <div class="l-offices-grid">
     <app-office-card
       [office]="office"
+      [openOffice]="true"
       *ngFor="let ghost of [].constructor(8)"
     ></app-office-card>
   </div>
 </ion-content>
+
+<app-add-button (buttonClick)="handleAddOffice()"></app-add-button>
