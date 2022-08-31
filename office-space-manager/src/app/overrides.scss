@@ -29,24 +29,3 @@ ion-col {
 .header-md::after {
   background-image: unset;
 }
-
-ion-input[type="email"],
-ion-input[type="text"] {
-  --background: var(--input-background) !important;
-  --color: var(--input-color) !important;
-  border: 0;
-  --placeholder-color: var(--input-color);
-  outline: unset;
-  border-radius: 8px;
-  width: 100%;
-  text-align: start;
-}
-
-input.native-input.sc-ion-input-md,
-input.native-input.sc-ion-input-ios {
-  height: 48px;
-  padding: 12px 16px;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-}
