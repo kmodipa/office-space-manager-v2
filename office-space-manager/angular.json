@@ -31,13 +31,17 @@
               }
             ],
             "styles": [
+              "src/theme/variables.scss",
               "src/app/variables.scss",
               "src/app/styles.scss",
               "src/app/overrides.scss",
               "src/global.scss",
-              "./node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": ["./node_modules/bootstrap/dist/js/bootstrap.min.js"],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ],
             "aot": false,
             "vendorChunk": true,
             "extractLicenses": false,
