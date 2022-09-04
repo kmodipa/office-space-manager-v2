@@ -18,6 +18,7 @@ export class OfficeHomePage implements OnInit {
     officeId: 'jsgf',
   };
 
+  isModalOpen = false;
   searchPhrase: string;
 
   constructor() {}
@@ -27,6 +28,11 @@ export class OfficeHomePage implements OnInit {
   handleAddStaffMember(): void {
     // TODO: Open Pop-up modal
     console.log('Open');
+    this.isModalOpen = !this.isModalOpen;
+  }
+
+  handleCloseModal(state: boolean): void {
+    this.isModalOpen = state;
   }
 
   handleLoadMoreStaffMembers(event: any): void {

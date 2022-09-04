@@ -7,7 +7,7 @@
     <app-office-card [office]="office" [openOffice]="false"></app-office-card>
   </div>
 
-  <ion-grid class="g-zero-padding l-search-input">
+  <ion-grid class="l-search-input">
     <ion-row class="l-search-icon">
       <ion-col size="11">
         <ion-input
@@ -53,6 +53,11 @@
     <ion-infinite-scroll-content loadingSpinner="crescent">
     </ion-infinite-scroll-content>
   </ion-infinite-scroll>
+
+  <app-modal
+    [isOpen]="isModalOpen"
+    (isClosed)="handleCloseModal($event)"
+  ></app-modal>
 </ion-content>
 
 <app-add-button (buttonClick)="handleAddStaffMember()"></app-add-button>

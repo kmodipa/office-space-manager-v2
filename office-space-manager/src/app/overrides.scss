@@ -15,6 +15,12 @@ ion-card-header {
   padding-bottom: 0;
 }
 
+// #region Ion-Grid
+ion-grid.ios.hydrated,
+ion-grid.md.hydrated {
+  margin: 0;
+}
+
 ion-row {
   display: flex;
   flex-direction: row;
@@ -25,11 +31,13 @@ ion-row {
 ion-col {
   padding: 0;
 }
+// #endregion
 
 .header-md::after {
   background-image: unset;
 }
 
+// #region Ion-Inputs
 ion-input[type="email"],
 ion-input[type="text"] {
   --background: var(--input-background) !important;
@@ -50,3 +58,31 @@ input.native-input.sc-ion-input-ios {
   font-weight: 400;
   line-height: 24px;
 }
+// #endregion
+
+// #region Buttons
+ion-button {
+  --border-radius: 100px;
+  width: 232px;
+  height: 48px;
+}
+// #endregion
+
+// #region Modal
+ion-modal {
+  --width: 343px;
+  --height: auto;
+  --border-radius: 8px;
+  --box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+// #endregion
+
+// #region SwiperJs
+swiper {
+  width: 100%;
+  height: 100%;
+}
+
+// #endregion

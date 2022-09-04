@@ -1,0 +1,107 @@
+<ion-modal #modal [isOpen]="isOpen" [canDismiss]="canDismiss">
+  <ng-template>
+    <ion-grid style="padding: 16px">
+      <ion-row>
+        <ion-col
+          [class.ion-hide]="slideIndex === 0"
+          size="2"
+          (click)="handleBackButton()"
+        >
+          <img src="assets/icon/arrow-left.svg" alt="back-arrow" />
+        </ion-col>
+        <ion-col
+          size="{{ slideIndex === 0 ? 11 : 9 }}"
+          class="l-modal-header-1"
+        >
+          New Staff Member
+        </ion-col>
+        <ion-col size="1" (click)="closeModal()">
+          <img src="assets/icon/close-circle.svg" alt="close" />
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col style="margin-top: 10px">
+          <swiper
+            #AddEditUser
+            [slidesPerView]="1"
+            [spaceBetween]="50"
+            [pagination]="true"
+            [allowTouchMove]="false"
+            (slideChange)="onSlideChange()"
+          >
+            <ng-template swiperSlide>
+              <div class="mb-5" *ngIf="slideIndex === 0">
+                <ion-input
+                  #firstName
+                  class="l-input"
+                  type="text"
+                  placeholder="First Name"
+                ></ion-input>
+                <ion-input
+                  #lastName
+                  class="l-input"
+                  type="text"
+                  placeholder="Last Name"
+                ></ion-input>
+              </div>
+            </ng-template>
+
+            <ng-template swiperSlide>
+              <form style="height: 220px" *ngIf="slideIndex === 1">
+                <ion-grid>
+                  <div class="l-modal-header-2">Avatar</div>
+                  <ion-row
+                    class="ion-justify-content-between mx-auto mb-3"
+                    style="width: 280px; height: 52px"
+                  >
+                    <ion-col
+                      class="ion-text-center"
+                      *ngFor="let avatar of avatarGroup1; let i = index"
+                    >
+                      <input
+                        type="radio"
+                        class="l-radio"
+                        value="{{ avatar }}"
+                        name="avatar"
+                        id="avatar{{ i }}"
+                      />
+                      <label for="avatar{{ i }}">
+                        <img class="l-avatar" src="{{ avatar }}" alt="avatar" />
+                      </label>
+                    </ion-col>
+                  </ion-row>
+                  <ion-row
+                    class="ion-justify-content-between mx-auto"
+                    style="width: 204px; height: 52px"
+                  >
+                    <ion-col
+                      class="ion-text-center"
+                      *ngFor="let avatar of avatarGroup2; let i = index"
+                    >
+                      <input
+                        type="radio"
+                        class="l-radio"
+                        value="{{ avatar }}"
+                        name="avatar"
+                        id="avatar{{ i + 5 }}"
+                      />
+                      <label for="avatar{{ i + 5 }}">
+                        <img class="l-avatar" src="{{ avatar }}" alt="avatar" />
+                      </label>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+              </form>
+            </ng-template>
+          </swiper>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-justify-content-around">
+        <ion-button color="secondary" (click)="handleNextButton()">
+          {{ buttonText }}
+        </ion-button>
+      </ion-row>
+    </ion-grid>
+  </ng-template>
+</ion-modal>

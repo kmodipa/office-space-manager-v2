@@ -6,17 +6,20 @@ import { IonicModule } from '@ionic/angular';
 import { AddOfficePage } from './add-office/add-office.page';
 import { OfficeHomePage } from './office-home/office-home.page';
 import { FormsModule } from '@angular/forms';
+import { SwiperModule } from 'swiper/angular';
+import { ModalComponent } from './modal/modal.component';
 
 const pages = [AddOfficePage, OfficeHomePage];
 
 @NgModule({
-  declarations: [...pages],
+  declarations: [...pages, ModalComponent],
   imports: [
     CommonModule,
     OfficeRoutingModule,
     SharedModule,
     IonicModule,
     FormsModule,
+    SwiperModule,
   ],
 })
 export class OfficeModule {}

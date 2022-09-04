@@ -5,6 +5,7 @@ import { IonicModule } from '@ionic/angular';
 import { TopNavbarComponent } from './components/top-navbar/top-navbar.component';
 import { AddButtonComponent } from './components/add-button/add-button.component';
 import { FormsModule } from '@angular/forms';
+import { SwiperModule } from 'swiper/angular';
 
 const components = [
   OfficeCardComponent,
@@ -14,7 +15,7 @@ const components = [
 
 @NgModule({
   declarations: [...components],
-  imports: [CommonModule, IonicModule, FormsModule],
+  imports: [CommonModule, IonicModule, FormsModule, SwiperModule],
   exports: [...components],
 })
 export class SharedModule {}
